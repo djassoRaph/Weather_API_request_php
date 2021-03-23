@@ -1,0 +1,106 @@
+11/01/21
+got email
+#downloaded docker as recommended
+12/01/21
+#coincidently got an e-mail from tl;dr about docker :
+
+>"Docker BuildKit: faster builds, new features, and now it’s stable (7 minute read)
+Docker BuildKit is a new backend for building images. It features faster builds using parallelism, 
+support for securely passing build secrets, upgradeability, and more. There are still some issues with it,
+but workarounds are available. BuildKit is enabled by default on new macOS and Windows installs, 
+so developers should make sure their builds work correctly on it."
+https://pythonspeed.com/articles/docker-buildkit/ 
+
+#Following tutorial
+Installed linux ubuntu onto my computer/windows build and trying to use a buildkit on docker
+followed a bunch of things to do on websites such as the link above and the suggested URLS of the initial install of docker.
+
+#Started a php file, then it's late and now I need sleep.
+
+went to bed, woke up.
+13/01/21
+Reading about the  https://openweathermap.org/api. documentation
+I might need a list of cities.
+https://datahub.io/core/world-cities#resource-world-cities_zip
+Use a json file probably
+
+Did some coding
+
+Re read the Task file.md
+Understood stuff
+I thought I was also going to have a test about a curl POST. 
+But I don't see it anywhere.
+Went to work
+
+14/01/21
+18h00 Working on weaher.php
+Downloaded a json file with all the cities of the world, and did some json manipulation to just get a list of cities. See discarded_code.php.
+Finished the whole curl request for city and temprature results, doing some esthetic :
+Tests to make sure the user doesn't request for a <i>beer</i> instead of the weather of a city.
+Did some json file manipulation to have a list of cities
+
+18h30
+
+Going to use it to see if the user input is a real city name.
+I noticed that if I type Lubiana, I get a return name as Ljubljana,
+On their side there must be some kind of process of the inputs;
+The API has more cities than my curreny world_cities.json 
+Name is a city in China... Lon 109 & Lat 23 Aprox 
+
+19h07
+Figure out regex input.
+What do I do with LONDON USA or LONDON UK!? OMG OR LONDON CANADA? // Nothing, I'll sleep on it
+
+I'm getting unexpected errors about php/<i class="fas fa-caret-square-left    "></i>. I need to reboot the computer or something. 
+Something to do with the error return on the curl...?
+
+
+Conclusion, get a working docker...
+note to self
+sudo apt-get install php-curl fixed it, on both sides in wsl and in powershell... ah the mysteries of computers.
+Linx command line returns more information than windows cmd.
+fixed a bits and bobs it's now 20:45 going to sleep 
+
+15/01/21
+woke up and got a docker version running.
+Adding comments here and there.
+
+Went to Work
+
+Trying to understand where I can integrate tests on this...phpUnit? 
+tests are done on user input.. I haven't done tests in over two years.
+
+Re read the task file.md 
+PSR-2 coding type adjusted. Going to run PHP_CodeSniffer.
+
+
+16/01/21
+In order to use php unit. I need to have classes and name space. Which I did not do. Sad face.
+Now to make things perfect I need two tests... Hrmm. I have not done tests in over two years... 
+Found something.
+I don't have the time to integrate phpUnit into this project.
+Did some tweaking now I have somewhat something that looks like a class with a namespace...
+Added tests and and more "if user inputs error"
+
+
+// 19h00 Prepping to send file.
+
+Just went I was doing some final testing. I got an error... 
+
+Took me about and hour and 20 minutes to find what I was looking for. 
+I was trying with preg_match() and preg_replace() but it was going no where.
+I tried filter_var() but in the end the solution was to use : escapeshellcmd()
+I didn't want people sending funny requests through to the API! 
+
+
+
+
+20:20 Final tests, exporting to docker image.
+
+zipping folder and so and so,
+
+thank you for your time. 
+
+Kind regards 
+
+Raphael RECK.
