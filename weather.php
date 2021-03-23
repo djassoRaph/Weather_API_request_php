@@ -9,7 +9,7 @@ namespace weather {
         public function readline()
         {
             $loop = true;
-            $token = 'c0f764ce5e4c25576b8d6325fc223810';
+            $token = '######'; // Hidden obviously
             print_r("\nThis is a simple weather request API. \nType something like 
             \n\n'Dakar' or 'London'\nHave fun!\nTo exit, press type 'exit' or press CTRL+C\n");
 
